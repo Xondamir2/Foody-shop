@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Foody - Organic Food Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+     {% include 'qismchalar/_links.html' %}
+</head>
+
+<body>
+    <!-- Spinner Start -->
+{% include 'qismchalar/_spinner.html' %}
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+{% include 'qismchalar/_navbar.html' %}
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+{% include 'qismchalar/_carousel.html' %}
+    <!-- Carousel End -->
+
+{% block about %}
+    <!-- About Start -->
+{% include 'qismchalar/_about.html' %}
+    <!-- About End -->
+{% endblock about %}
+
+
+{% block feature %}
+    <!-- Feature Start -->
+{% include 'qismchalar/_feature.html' %}
+    <!-- Feature End -->
+{% endblock feature %}
+
+
+
+
+{% block visit %}
+    <!-- Firm Visit Start -->
+{% include 'qismchalar/_firm_visit.html' %}
+    <!-- Firm Visit End -->
+{% endblock visit %}
+
+    {% block main %}
+    {% endblock main %}
+
+{% block comment %}
+    <!-- Testimonial Start -->
+{% include 'qismchalar/_testimonial.html' %}
+    <!-- Testimonial End -->
+{% endblock comment %}
+
+
+    <!-- Footer Start -->
+{% include 'qismchalar/_footer.html' %}
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+{% include 'qismchalar/_js.html' %}
+
+</body>
+
+</html>

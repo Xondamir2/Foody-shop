@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block about %}
+
+{% endblock about %}
+{% block feature %}
+
+{% endblock feature %}
+{% block visit %}
+
+{% endblock visit %}
+{% block comment %}
+{% endblock comment %}
+{% block main %}
+<h1>Savatdagi Mahsulotlar</h1>
+<h3><a href="{% url 'index' %}">Bosh Sahifa</a></h3>
+
+
+{% for order_product in order_products %}
+<hr>
+<ul>
+     <img class="img-fluid" src="{{ order_product.product.image.url }}" alt="">
+    <li><h2>Nomi : {{ order_product.product.name }}</h2></li>
+    <li><p>Narxi : {{ order_product.product.price }}</p></li>
+    <li><p>Description : {{ order_product.product.description }}</p></li>
+    <li>
+        <a href="{% url 'to-cart' order_product.product.pk 'delete' %}" style="text-decoration : None">➖</a>
+        {{ order_product.quantity }}
+        <a href="{% url 'to-cart' order_product.product.pk 'add' %}" style="text-decoration : None">➕</a>
+    </li>
+</ul>
+{% endfor %}
+<a href="{% url 'payment' %}">Sotib olish</a>
+<button class="btn-ens-action btn-ens-style"
+	data-rel="4a9f99dc105">
+	Купить
+</button>
+{% endblock main %}

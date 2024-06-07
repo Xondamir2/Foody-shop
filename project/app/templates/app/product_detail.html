@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block product %}
+
+{% endblock product %}
+
+{% block feature %}
+
+{% endblock feature %}
+
+{% block about %}
+
+{% endblock about %}
+
+{% block blog %}
+{% endblock blog %}
+
+{% block main %}
+<div class="product-detail">
+    <img src="{{ product.image.url }}" alt="{{ product.title }}">
+    <h2>Name :{{ product.name }}</h2>
+    <p>Description :{{ product.description }}</p>
+    <p>Price: {{ product.price }}</p>
+    <p>Discount :{{product.discount}}</p>
+    <p>Quantity :{{product.quantity}}</p>
+</div>
+
+
+{% endblock main %}
